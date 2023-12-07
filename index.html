@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storytelling App</title>
+</head>
+<body>
+    <h1>Welcome to the Storytelling App</h1>
+    
+    <!-- Story Input Form -->
+    <form id="storyForm">
+        <label for="userInput">Enter your prompt:</label>
+        <input type="text" id="userInput" name="userInput" required>
+        <button type="button" onclick="generateStory()">Generate Story</button>
+    </form>
+
+    <!-- Display Generated Story and Sentiment Score -->
+    <div id="storyDisplay"></div>
+    <p id="sentimentScore"></p>
+
+    <script>
+        function generateStory() {
+            // Fetch user input and make a request to the server (API) to generate a story
+            const userInput = document.getElementById('userInput').value;
+
+            // Make an AJAX request to your Flask API
+            fetch('http://localhost:5000/generate_story', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `user_input=${encodeURIComponent(userInput)}`, // Encode user input
+})
+
+            .then(response => response.json())
+            .then(data => {
+                // Update the storyDisplay element with the generated story
+                document.getElementById('storyDisplay').innerHTML = `<p>${data.generated_story}</p>`;
+
+                // Display the sentiment score
+                const sentimentScore = document.getElementById('sentimentScore');
+                sentimentScore.innerHTML = `Sentiment Score: ${data.sentiment_score}`;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
