@@ -13,13 +13,23 @@ Before running the application, ensure you have the following installed:
 
 # Steps
 # 1- Clone the Repository:
-
-git clone https://github.com/zelal-k/AI-story.git
-cd your-repository
+1. Navigate to the requirements.txt file and ensure you have the required programs and library's
+- Make sure you have the programs in the stated version (different versions may have differences that do not allow the successful running of the application)
+2. Navigate to your command prompt (CMD)
+3. Navigate to your desired folder and clone the repository on your local system
+- Type "cd\" press enter
+- Type "cd file_path" press enter (Insert your desired filepath where it says file_path)
+- Go to the Github Repository, Click on Code in the repository on the Github Website and copy the given Github URL
+- Type git clone https://github.com/zelal-k/AI-story.git
+4. Navigate to this new folder in your filepath
+- Type "cd\" press enter
+- Type "cd file_path" press enter.
 
 # 2- Install Dependencies:
 
-pip install -r requirements.txt
+- Use the pip command on the requirements file.
+- "pip install -r requirements.txt"
+
 
 # 3- Set Up OpenAI API Key:
 
@@ -29,12 +39,12 @@ pip install -r requirements.txt
 
 # 4- Run the Application:
 
-python app.py
+- Type python app.py
 This will start the Flask development server.
 
 # 5- Access the Application:
-Open your web browser and go to http://localhost:5000/.
-
+- Open your web browser and go to http://localhost:5000/.
+- Enjoy the Storytelling App!
 # 6- Generate Stories:
 
 Enter a prompt in the provided form.
