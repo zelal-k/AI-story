@@ -6,15 +6,15 @@ The application uses Generative AI, specifically OpenAI's GPT model, to create p
 Prerequisites
 Before running the application, ensure you have the following installed:
 
-Python (version X.X)
-Flask
-OpenAI Python library
-textblob library
+- Python (version X.X)
+- Flask
+- OpenAI Python library
+- textblob library
 
 # Steps
 # 1- Clone the Repository:
 
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/zelal-k/AI-story.git
 cd your-repository
 
 # 2- Install Dependencies:
