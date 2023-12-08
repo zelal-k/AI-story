@@ -43,7 +43,7 @@ Before running the application, ensure you have the following installed:
 This will start the Flask development server.
 
 # 5- Access the Application:
-- Open your web browser and go to http://localhost:5000/.
+- Open your web browser and go to http://127.0.0.1:5000
 - Enjoy the Storytelling App!
 # 6- Generate Stories:
 
